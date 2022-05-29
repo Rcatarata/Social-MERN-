@@ -1,12 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Expenses from './routes/Expenses';
+import Invoices from './routes/Invoices';
+import Invoice from './routes/Invoice';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} >
+          <Route path="expenses" element={<Expenses />} />
+          <Route path="invoices" element={<Invoices />} >
+            <Route
+              index
+              element={
+                <main style={{padding: '1rem'}}>
+                  <h2>Select an invoice</h2>
+                </main>
+              }
+              />
+            <Route path=':invoiceId' element={<Invoice/>}/>
+          </Route>
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Route>
+      </Routes>
+  </BrowserRouter>
   </React.StrictMode>
 );
 
