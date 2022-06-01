@@ -10,6 +10,11 @@ h1 {
   font-family: 'Montserrat', sans-serif;
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .nav--bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,5 +57,105 @@ h1 {
 
 .nav--bar .nav--list li:hover {
   cursor: pointer;
+}
+
+.signup {
+  width: 100vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup--container {
+  height: 300px;
+  width: 400px;
+  background-color: rgba(177, 177, 177, 0.313);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup--container h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+}
+
+.signup--container .form--container {
+  font-size: .9rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5rem 10rem;
+      grid-template-columns: 5rem 10rem;
+  grid-gap: .5rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px 0px;
+}
+
+.signup--container button {
+  margin: 10px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}
+
+.signup--container button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.user {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user--container {
+  margin: 0px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.user--container li {
+  margin: 30px;
 }
 /*# sourceMappingURL=style.css.map */
