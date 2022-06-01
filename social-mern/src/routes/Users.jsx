@@ -51,6 +51,7 @@ export default function Users() {
             </li>
           ))}
       </ul>
+      {/* <p>{data[0].name}</p> */}
       <Outlet />
     </div>
   )
