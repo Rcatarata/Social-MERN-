@@ -3,6 +3,7 @@ html{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
   }
 
 h1{
@@ -94,8 +95,9 @@ h1{
 }
 .user--container{
     margin: 0px 50px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: 300px 300px 300px;
     li{
         margin: 30px;
     }
