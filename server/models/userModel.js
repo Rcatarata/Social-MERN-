@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const goalSchema = mongoose.Schema({
+const userSchema = mongoose.Schema({
     name: {
         type: String, 
         required: [true, 'Please add a name']
