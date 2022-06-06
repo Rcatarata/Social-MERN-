@@ -1,6 +1,6 @@
 const express = require('express');
-const {route} = require('./talkRoutes');
-const router = express.Router();
+const { route } = require('./talkRoutes');
+const router = express.Router()
 const {registerUser, loginUser, getMe} = require('../controllers/userController')
 
 const {protect} = require('../middleware/authMiddleware')
