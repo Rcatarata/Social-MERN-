@@ -17,8 +17,9 @@ function TalkForm() {
     <section className="form">
         <form onSubmit={onSubmit}>
             <div className="form-group">
-                <label htmlFor="text">Goal</label>
-                <input type="text" name='text' id='text' value={text} onChange={(e) => setText(e.target.value)}/>
+                <label htmlFor="text"></label>
+                {/* <input type="text" name='text' id='text' value={text} placeholder='whats popin?' onChange={(e) => setText(e.target.value)}/> */}
+                <textarea name="text" id="text" cols="" rows="" placeholder="What's poppin?" onChange={(e) => setText(e.target.value)} ></textarea>
             </div>
             <div className="form-group">
                 <button className="btn btn-block" type='submit'>Add Goal</button>

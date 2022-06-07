@@ -19,7 +19,7 @@ export default function Nav() {
         <Link className='link' to='/'><h1>Better books</h1></Link>
         <ul className='nav--list'>
         {user?
-            <button onClick={onLogout}>Logout</button>:(<>
+            <li className ='link' onClick={onLogout}>Logout</li>:(<>
             <Link to='/login' className='link'><li>Login</li></Link>
             <Link to='/SignUp' className='link'><li>Sign Up</li></Link></>)
         }  

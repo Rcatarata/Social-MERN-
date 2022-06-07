@@ -157,4 +157,138 @@ h1 {
 .user--container li {
   margin: 30px;
 }
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.dash--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+.talk--item {
+  background-color: rgba(85, 85, 85, 0.243);
+  height: 100px;
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  margin: 15px;
+}
+
+.talk--item svg {
+  margin: 20px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.talk--item .talk-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7em;
+  margin: 0px;
+  width: 75%;
+}
+
+.talk--item p {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  font-size: 1.4rem;
+}
+
+.talk--item button {
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+
+.talk--item button:hover {
+  cursor: pointer;
+}
+
+.form textarea {
+  height: 50px;
+  width: 600px;
+  text-indent: 5px;
+  resize: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form button {
+  margin: 5px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

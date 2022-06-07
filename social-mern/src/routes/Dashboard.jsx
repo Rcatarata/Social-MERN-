@@ -34,10 +34,10 @@ function Dashboard() {
     return <Spinner />
   }
   return (
-    <>
-      <section className="heading">
+    <div className='dash--container'>
+      <section className=''>
         <h1>Welcome {user && user.name}</h1> 
-        <p>Talk Dashboard</p>
+        <p>Lets Talk About it</p>
       </section>
       <TalkForm />
       <section className="content">
@@ -49,7 +49,7 @@ function Dashboard() {
           </div>
         ): (<h3>There are no goals</h3>)}
       </section>
-    </>
+    </div>
   )
 }
 

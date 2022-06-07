@@ -7,7 +7,7 @@ html{
   }
 
 h1{
-    font-family:'Montserrat', sans-serif;;
+    font-family:'Montserrat', sans-serif;
 }
 
 .link{
@@ -133,3 +133,66 @@ h1{
       transform: rotate(360deg);
     }
   }
+
+.dash--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.talk--item{
+    background-color: rgba(85, 85, 85, 0.243);
+    height: 100px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    margin: 15px;
+    svg{
+        margin: 20px;
+        padding: 8px;
+        border-radius: 50%;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .talk-date{
+        font-family:'Montserrat', sans-serif;
+        font-size: .7em;
+        margin: 0px;
+        width: 75%;
+    }
+    p{
+        font-family:'Montserrat', sans-serif;
+        margin: 0px;
+        font-size: 1.4rem;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        color: black;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
+.form{
+
+    textarea{
+        height: 50px;
+        width: 600px;
+        text-indent: 5px;
+        resize: none;
+        font-family:'Montserrat', sans-serif;
+    }
+    button{
+        margin: 5px;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        background-color: green;
+        cursor: pointer;
+    }
+}
