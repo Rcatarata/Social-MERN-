@@ -26,7 +26,7 @@ export default function SignUp() {
       toast.error(message)
     }
     if(isSuccess || user) {
-      navigate('/users')
+      navigate('/')
     }
     dispatch(reset())
   }, [user, isError, isSuccess, message, navigate, dispatch])

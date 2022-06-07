@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import UserProfile from './routes/UserProfile';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import Dashboard from './routes/Dashboard';
+import Unknown from './components/Unknown'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,10 +19,12 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} >
+            <Route path='/' element= {<Dashboard />} />
             <Route path="Login" element={<Login />} />
             <Route path="signUp" element={<SignUp />} />
             <Route path='users' element={<Users />} />
             <Route path='users/:userId' element={<UserProfile/>} />
+            <Route path='*' element={<Unknown />} />
           </Route>
         </Routes>
       </BrowserRouter>

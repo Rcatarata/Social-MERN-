@@ -25,7 +25,7 @@ export default function Login() {
       toast.error('Email or password incorrect. Please try again')
     }
     if(isSuccess||user) {
-      navigate('/users')
+      navigate('/')
     }
     dispatch(reset())
   }, [user, isError, isSuccess, message, navigate, dispatch])
