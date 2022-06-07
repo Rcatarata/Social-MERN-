@@ -1,16 +1,28 @@
 import React from 'react'
-import { Link, Outlet} from 'react-router-dom'
+import { Link, Outlet, useNavigate} from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import {logout, reset} from '../features/auth/authSlice'
 
 export default function Nav() {
+  const navigate = useNavigate();
+  const dispatch =  useDispatch();
+  const {user} = useSelector((state) => state.auth)
+
+  const onLogout = () => {
+    dispatch(logout())
+    dispatch(reset())
+    navigate('/')
+  }
+
   return (
     <div className='nav--bar'>
         <Link className='link' to='/'><h1>Better books</h1></Link>
         <ul className='nav--list'>
-            {/* <li>Features</li>
-            <li>About Us</li>
-            <li>Contact Us</li> */}
+        {user?
+            <button onClick={onLogout}>Logout</button>:(<>
             <Link to='/login' className='link'><li>Login</li></Link>
-            <Link to='/SignUp' className='link'><li>Sign Up</li></Link>
+            <Link to='/SignUp' className='link'><li>Sign Up</li></Link></>)
+        }  
         </ul>
     </div>
   )

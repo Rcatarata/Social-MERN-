@@ -7,20 +7,24 @@ import SignUp from './routes/SignUp';
 import Users from './routes/Users';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import UserProfile from './routes/UserProfile';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} >
-          <Route path="Login" element={<Login />} />
-          <Route path="signUp" element={<SignUp />} />
-          <Route path='users' element={<Users />} />
-          <Route path='users/:userId' element={<UserProfile/>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} >
+            <Route path="Login" element={<Login />} />
+            <Route path="signUp" element={<SignUp />} />
+            <Route path='users' element={<Users />} />
+            <Route path='users/:userId' element={<UserProfile/>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
