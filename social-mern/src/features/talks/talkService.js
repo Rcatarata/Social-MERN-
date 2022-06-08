@@ -29,26 +29,26 @@ const getTalks = async (token) => {
   }
 
 // Delete user goal
-const deleteTalk = async (goalId, token) => {
+const deleteTalk = async (talkId, token) => {
     const config = {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     }
   
-    const response = await axios.delete(API_URL + goalId, config)
+    const response = await axios.delete(API_URL + talkId, config)
   
     return response.data
   }
 
-const patchTalk = async (goalId, token) => {
+const patchTalk = async (talkId, token) => {
     const config = {
     headers: {
         Authorization: `Bearer ${token}`,
     },
     }
 
-    const response = await axios.patch(API_URL + goalId, config)
+    const response = await axios.patch(API_URL + talkId, config)
 
     return response.data
 }

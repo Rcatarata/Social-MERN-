@@ -8,6 +8,7 @@ const User = require('../models/userModel');
 
 const getTalks = asyncHandler(async (req, res) => {
     const talks = await Talk.find({user: req.user.id})
+    // const talks = await Talk.find()
     res.status(200).json(talks)
 })
 

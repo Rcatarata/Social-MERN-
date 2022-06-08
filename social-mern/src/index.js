@@ -4,9 +4,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './routes/Login';
 import SignUp from './routes/SignUp';
+import Users2 from './routes/Users2';
 import Users from './routes/Users';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import UserProfile from './routes/UserProfile';
+import User2Profile from './routes/User2Profile';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import Dashboard from './routes/Dashboard';
@@ -23,7 +24,8 @@ root.render(
             <Route path="Login" element={<Login />} />
             <Route path="signUp" element={<SignUp />} />
             <Route path='users' element={<Users />} />
-            <Route path='users/:userId' element={<UserProfile/>} />
+            <Route path='users2' element={<Users2 />} />
+            <Route path='users2/:userId' element={<User2Profile/>} />
             <Route path='*' element={<Unknown />} />
           </Route>
         </Routes>

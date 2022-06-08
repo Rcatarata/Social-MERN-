@@ -15,6 +15,7 @@ function TalkItem({ talk }) {
       <div className='talk-date'>
         <div>{new Date(talk.createdAt).toLocaleString('en-US')}</div>
         <p>{talk.text}</p>
+        <p>{}</p>
       </div>
       <button onClick={() => dispatch(deleteTalk(talk._id))} className='close'>
             X

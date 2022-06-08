@@ -78,6 +78,11 @@ const getMe = asyncHandler(async (req, res) => {
     })
 })
 
+const findUsers = asyncHandler(async (req, res) => {
+    const allUsers = await User.find()
+    res.status(200).json(allUsers)
+})
+
 
 // generate JWT token 
 const generateToken = (id) => {
@@ -88,5 +93,5 @@ const generateToken = (id) => {
 
 
 module.exports = {
-    registerUser, loginUser, getMe
+    registerUser, loginUser, getMe, findUsers
 }

@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
+const {ObjectId} = mongoose.Schema.Types
 
 const talkSchema = mongoose.Schema({
     user: {
-        type: mongoose.Schema.Types.ObjectId, 
+        type: ObjectId, 
         required: true, 
         ref: 'User'
     }, 
@@ -10,6 +11,11 @@ const talkSchema = mongoose.Schema({
         type: String, 
         required: [true, 'Please add a text value']
     },
+    likes: [{type:ObjectId, ref:'User'}], 
+    comments: [{
+        text: String, 
+        postedBy:{type:ObjectId, ref:'User'}
+    }],
 }, 
 {
     timestamps: true

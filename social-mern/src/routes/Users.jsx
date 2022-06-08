@@ -1,64 +1,55 @@
-import {React, useState, useEffect} from 'react'
-import { Link, Outlet } from 'react-router-dom';
+// import {useEffect} from 'react'
+// import {useNavigate} from 'react-router-dom'
+// import {useSelector, useDispatch} from 'react-redux'
+// import Spinner from '../components/Spinner'
+// import { getUsers, reset } from '../features/auth/authSlice'
 
-export default function Users() {
-  const userUrl = 'https://jsonplaceholder.typicode.com/users'
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+// export default function Users() {
+//   const navigate = useNavigate()
+//   const dispatch = useDispatch()
 
+//   const {user} = useSelector((state) => state.auth)
+//   const {users, isLoading, isError, message} = useSelector((state) => state.auth)
 
-  useEffect(() => {
-    fetch(userUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            `This is an HTTP error: The status is ${response.status}`
-          );
-        }
-        return response.json();
-      })
-      .then((actualData) => {
-        setData(actualData);
-        setError(null);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setData(null);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+  
+//   useEffect(() => {
+//     if (isError) {
+//       console.log(message);
+//     }
+//     if (!user) {
+//       navigate('/login');
+//     }
+//   }, [isError, message, user, navigate]);
+
+//   useEffect(() => {
+//     dispatch(getUsers());
+
+//     return () => dispatch(reset());
+//   }, [dispatch]);
 
 
+//   if(isLoading) {
+//     return <Spinner />
+//   }
 
-  return (
-    <div className='user'>
-       <h1>Users</h1>
-      {loading && <div>A moment please...</div>}
-      {error && (
-        <div>{`There is a problem fetching the post data - ${error}`}</div>
-      )}
-      <ul className='user--container'>
-        {data &&
-          data.map(({ name, id, website, phone }) => (
-            <li key={id}>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="80" height="80" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <desc>Download more icon variants from https://tabler-icons.io/i/user</desc>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-            </svg>
-              <p>{name}</p>
-              <p>{phone}</p>
-              <p>{website}</p>
-              <Link to={`/users/${id}`} key={id}><p>View Profile</p></Link>
-            </li>
-          ))}
-      </ul>
-      {/* <p>{data[0].name}</p> */}
-      <Outlet />
-    </div>
-  )
-}
+
+
+//   return (
+//     <div className='user'>
+//        <h1>Users</h1>
+//        <div className='dash--container'>
+//         <section className=''>
+//           <h1>Welcome {user && user.name}</h1> 
+//           <p>Lets Talk About it</p>
+//         </section>
+//         {/* {users.map((users) => (
+//               <div>
+//                 <p>{users}</p>
+//                 <p></p>
+//               </div> ))} */}
+
+             
+//     </div>
+//     </div>
+//   )
+// }

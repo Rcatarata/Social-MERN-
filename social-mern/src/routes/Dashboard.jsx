@@ -44,7 +44,7 @@ function Dashboard() {
         {talks.length > 0 ? (
           <div className='goals'>
             {talks.map((talk) => (
-              <TalkItem key={talk._id} talk={talk} />
+              <TalkItem key={talk._id} talk={talk} user={user}/>
             ))}
           </div>
         ): (<h3>There are no goals</h3>)}
